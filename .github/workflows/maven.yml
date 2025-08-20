@@ -55,6 +55,6 @@ jobs:
            mvn -B -ntp verify 
            org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
            -Dsonar.projectKey=Nagiici_cicd-demo 
-           -Dsonar.organization=Nagiici 
+           -Dsonar.organization=nagiici 
            -Dsonar.host.url=https://sonarcloud.io
 
