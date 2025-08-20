@@ -49,10 +49,7 @@ jobs:
 
       - name: Build and analyze on SonarCloud
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # 用于取 PR 信息
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}     # 你在 Secrets 里配置的
-        run: |
-          mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey=<Nagiici_cicd-demo> \
-            -Dsonar.organization=<nagiici> \
-            -Dsonar.host.url=https://sonarcloud.io
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=NagiciivA_cicd-demo -Dsonar.organization=NagiciivA -Dsonar.host.url=https://sonarcloud.io
+
